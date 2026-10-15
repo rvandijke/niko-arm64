@@ -1,5 +1,7 @@
 # niko-arm64: run the Niko Home Control programming software natively on Apple Silicon
 
+> Unofficial, not affiliated with Niko. For personal use on your own Mac; don't redistribute the built app.
+
 The Niko Home Control programming software for macOS (Niko Home Control II / NHC2) is Intel-only,
 so on an Apple Silicon Mac (M1, M2, M3, M4) it runs under Rosetta 2. It starts slowly, the UI lags
 and CPU use is high. This script builds a native arm64 copy of it:
@@ -37,7 +39,6 @@ Requires macOS on Apple Silicon and Python 3.9+ (`xcode-select --install` provid
   original app instead and re-run the script.
 - Both apps share settings and data.
 - Test with a backup `.nhc2` file before uploading to your installation.
-- Not affiliated with Niko. For personal use on your own Mac; don't redistribute the built app.
 
 Built mainly by [Claude](https://claude.com/claude-code).
 
