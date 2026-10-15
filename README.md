@@ -1,13 +1,21 @@
-# niko-arm64
+# Niko Home Control programming software for Apple Silicon Macs
 
-The Niko Home Control programming software for macOS is Intel-only, so on Apple Silicon it runs
-under Rosetta 2 and is slow. This script builds a native arm64 copy of it:
+The Niko Home Control programming software for macOS (Niko Home Control II / NHC2) is Intel-only,
+so on an Apple Silicon Mac (M1, M2, M3, M4) it runs under Rosetta 2. It starts slowly, the UI lags
+and CPU use is high. This script builds a native arm64 copy of it:
 
 - swaps the Intel Electron and .NET runtimes for the official arm64 builds of the same versions
 - precompiles the .NET backend for arm64 (no JIT compilation at startup)
 - fixes the backend process staying alive after you quit the app
 
 Niko's own code is left untouched. The original app isn't modified.
+
+Startup time on an M4 Pro (version 2.27, median of 5 runs, from launch until the app is loaded):
+
+| | Startup |
+|---|---|
+| Original (Intel, Rosetta 2) | 12.1 s |
+| Native arm64 | 5.7 s |
 
 ## Usage
 
@@ -36,3 +44,15 @@ Built mainly by [Claude](https://claude.com/claude-code).
 ## License
 
 MIT. See [LICENSE](LICENSE). This covers the script only, not the Niko software it converts.
+
+## Nederlands
+
+De Niko Home Control programmeersoftware (NHC2) voor macOS is Intel-only en draait op Apple Silicon
+(M1/M2/M3/M4) onder Rosetta 2. Dit script genereert een native arm64-versie: de Electron- en
+.NET-runtimes worden vervangen door de arm64-builds en de .NET-backend wordt vooraf gecompileerd.
+
+## Français
+
+Le logiciel de programmation Niko Home Control (NHC2) pour macOS est Intel-only et tourne sous
+Rosetta 2 sur Apple Silicon (M1/M2/M3/M4). Ce script en génère une version arm64 native : les
+runtimes Electron et .NET sont remplacés par les builds arm64 et le backend .NET est précompilé.
