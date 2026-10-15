@@ -1,4 +1,4 @@
-# Niko Home Control programming software for Apple Silicon Macs
+# niko-arm64: run the Niko Home Control programming software natively on Apple Silicon
 
 The Niko Home Control programming software for macOS (Niko Home Control II / NHC2) is Intel-only,
 so on an Apple Silicon Mac (M1, M2, M3, M4) it runs under Rosetta 2. It starts slowly, the UI lags
